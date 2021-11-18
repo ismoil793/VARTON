@@ -758,16 +758,16 @@ section {
 .portfolio .portfolio-item .portfolio-info .preview-link,
 .portfolio .portfolio-item .portfolio-info .details-link {
    position: absolute;
-   right: 40px;
+   right: 15px;
    font-size: 24px;
    top: calc(50% - 18px);
-   color: #206bfb;
+   color: #5f687b;
    transition: 0.3s;
 }
 
 .portfolio .portfolio-item .portfolio-info .preview-link:hover,
 .portfolio .portfolio-item .portfolio-info .details-link:hover {
-   color: #16df7e;
+   color: #000;
 }
 
 .portfolio .portfolio-item .portfolio-info .details-link {
@@ -1399,4 +1399,8 @@ section {
       -moz-text-align-last: center;
       text-align-last: center;
    }
+}
+
+.vbox-share {
+   display: none;
 }
