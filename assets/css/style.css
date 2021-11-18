@@ -50,13 +50,13 @@ h6 {
    width: 40px;
    height: 40px;
    border-radius: 4px;
-   background: #16df7e;
+   background: #5f687b;
    color: #fff;
    transition: all 0.4s;
 }
 
 .back-to-top i:hover {
-   background: #206bfb;
+   background: #4b5363;
    color: #fff;
 }
 
@@ -125,6 +125,7 @@ h6 {
    transition: 0.3s;
    font-size: 14px;
    font-family: "Open Sans", sans-serif;
+   border-bottom: 1px solid transparent;
 }
 
 .nav-menu a:hover,
@@ -416,8 +417,7 @@ h6 {
 }
 
 #hero .btn-watch-video:hover i {
-   /* color: #16df7e; */
-   color: #f39600;
+   color: #ce67c9;
 }
 
 #hero .animated {
@@ -558,7 +558,7 @@ section {
 }
 
 .featured-services .icon i {
-   color: #16df7e;
+   color: #5f687b;
    font-size: 36px;
 }
 
@@ -577,8 +577,12 @@ section {
    border-color: #eaecef;
 }
 
+.featured-services .icon-box:hover i {
+   color: #000;
+}
+
 .featured-services .icon-box:hover .title a {
-   color: #16df7e;
+   color: #000;
 }
 
 .featured-services .description {
@@ -607,7 +611,7 @@ section {
 .about .content ul i {
    font-size: 20px;
    padding-right: 4px;
-   color: #16df7e;
+   color: #5f687b;
 }
 
 .about .content p:last-child {
@@ -657,7 +661,7 @@ section {
 }
 
 .services .icon-box .icon i {
-   color: #16df7e;
+   color: #5f687b;
    font-size: 36px;
    transition: 0.3s;
 }
@@ -683,8 +687,9 @@ section {
    border-color: #eaecef;
 }
 
-.services .icon-box:hover h4 a {
-   color: #16df7e;
+.services .icon-box:hover h4 a,
+.services .icon-box:hover i {
+   color: #000;
 }
 
 /*--------------------------------------------------------------
@@ -708,11 +713,13 @@ section {
    text-transform: uppercase;
    color: #444444;
    transition: all 0.3s ease-in-out;
+   border-bottom: 1px solid transparent;
 }
 
-.portfolio #portfolio-flters li:hover,
+/* .portfolio #portfolio-flters li:hover, */
 .portfolio #portfolio-flters li.filter-active {
-   color: #16df7e;
+   color: #000;
+   border-bottom: 1px solid #000;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -1008,14 +1015,14 @@ section {
 }
 
 .contact .info .social-links a:hover {
-   background: #16df7e;
+   background: #000;
    color: #fff;
 }
 
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-   background: #16df7e;
+   background: #000;
    color: #fff;
 }
 
@@ -1100,6 +1107,7 @@ section {
 
 .contact .php-email-form button[type="submit"] {
    background: #060703;
+   box-shadow: 0 8px 28px rgba(133, 142, 161, 0.45);
    border: 0;
    padding: 10px 24px;
    color: #fff;
@@ -1108,7 +1116,8 @@ section {
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-   background: #206bfb;
+   background: #3e4450;
+   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
 }
 
 @-webkit-keyframes animate-loading {
@@ -1361,7 +1370,7 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-   background: #16df7e;
+   background: #5f687b;
    color: #fff;
    text-decoration: none;
 }
