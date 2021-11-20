@@ -42,8 +42,9 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html">
-          Varton
+      <h1 class="logo mr-auto">
+        <a href="index.html">
+          <img width="115" src="assets/img/Varton.png" alt="Varton-logo">
         </a>
       </h1>
       <!-- Uncomment below if you prefer to use an image logo -->
@@ -573,24 +574,24 @@
               <div class="address">
                 <i class="icofont-google-map"></i>
                 <h4>Адрес:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>г. Ташкент, Мирабадский
+                  район, ул. Т.Шевченко 22-24</p>
               </div>
 
               <div class="email">
                 <i class="icofont-envelope"></i>
                 <h4>Email:</h4>
-                <p>info@example.com</p>
+                <p>info@varton.uz</p>
               </div>
 
               <div class="phone">
                 <i class="icofont-phone"></i>
                 <h4>Телефон:</h4>
-                <p>+1 5589 55488 55s</p>
+                <p>+998 94 671 1441</p>
               </div>
 
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-                frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+              <div id="map" style="border:0; width: 100%; height: 290px;"></div>
+
             </div>
 
           </div>
@@ -648,9 +649,9 @@
 
         <div class="row  justify-content-center">
           <div class="col-lg-6">
-            <h3>eNno</h3>
-            <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi
-              placeat.</p>
+            <h3><img width="115" src="assets/img/Varton.png" alt="Varton-logo"></h3>
+            <p>Компания «Вартон» каждый день доказывает, что внедрение новых технологий необходимо, а использование
+              качественных и долговечных материалов гораздо важнее, чем чрезмерное удешевление производства.</p>
           </div>
         </div>
 
@@ -682,7 +683,11 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/enno-free-simple-bootstrap-template/ -->
-        Email: <a href="mailto:info@varton.ru">info@varton.ru</a>
+        Email: <a href="mailto:info@varton.ru">info@varton.uz</a>
+        <br>
+        Телефон: <a href="tel:+998946711441">+998 94 671 1441</a>
+        <br>
+        <i class="bx bxl-telegram"></i> +998 99 870 0777
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -699,6 +704,39 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/venobox/venobox.min.js"></script>
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=51b3e849-a5a5-4896-b12b-28cdc7864a76
+  &lang=ru_RU" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+    function init() {
+      // Создание карты.
+      var myMap = new ymaps.Map("map", {
+        // Координаты центра карты.
+        // Порядок по умолчанию: «широта, долгота».
+        // Чтобы не определять координаты центра карты вручную,
+        // воспользуйтесь инструментом Определение координат.
+        center: [41.302182, 69.275766],
+        placemark: [41.302182, 69.275766],
+        // Уровень масштабирования. Допустимые значения:
+        // от 0 (весь мир) до 19.
+        zoom: 17,
+
+      });
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+        hintContent: 'Наш офис'
+      }, {
+        iconLayout: 'default#image',
+        iconImageHref: 'assets/img/Varton.png',
+        iconImageSize: [80, 20], // Размеры метки.
+        iconImageOffset: [-25, -25]
+      }),
+        myMap.geoObjects
+          .add(myPlacemark)
+    }
+  </script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
