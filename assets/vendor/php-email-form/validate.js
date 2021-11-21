@@ -1,15 +1,15 @@
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
   "use strict";
 
   //Contact
-  $('form.php-email-form').submit(function() {
-   
+  $('form.php-email-form').submit(function () {
+
     var f = $(this).find('.form-group'),
       ferror = false,
       emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
 
-    f.children('input').each(function() { // run all inputs
-     
+    f.children('input').each(function () { // run all inputs
+
       var i = $(this); // current input
       var rule = i.attr('data-rule');
 
@@ -43,7 +43,7 @@ jQuery(document).ready(function($) {
             break;
 
           case 'checked':
-            if (! i.is(':checked')) {
+            if (!i.is(':checked')) {
               ferror = ierror = true;
             }
             break;
@@ -58,7 +58,7 @@ jQuery(document).ready(function($) {
         i.next('.validate').html((ierror ? (i.attr('data-msg') !== undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
       }
     });
-    f.children('textarea').each(function() { // run all inputs
+    f.children('textarea').each(function () { // run all inputs
 
       var i = $(this); // current input
       var rule = i.attr('data-rule');
@@ -95,22 +95,31 @@ jQuery(document).ready(function($) {
     var this_form = $(this);
     var action = $(this).attr('action');
 
-    if( ! action ) {
+    if (!action) {
       this_form.find('.loading').slideUp();
       this_form.find('.error-message').slideDown().html('The form action property is not set!');
       return false;
     }
-    
+
     this_form.find('.sent-message').slideUp();
     this_form.find('.error-message').slideUp();
     this_form.find('.loading').slideDown();
-    
+
+    console.log(str)
+    var token = "2137358560:AAEc9ebRPBj8liYT0cvamRu2V9HzRiJ0Ev0"
+    var chat_id = "-603889093"
+    var title = document.getElementById("subject").value;
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var body = document.getElementById("message").value;
+    var message = "От: " + name + "%0AEmail: " + email + "%0A%0A" + "Тема: " + title + "%0A%0A" + body
+
     $.ajax({
       type: "POST",
-      url: action,
+      url: "https://api.telegram.org/bot" + token + "/sendMessage?text=" + message + "&chat_id=" + chat_id,
       data: str,
-      success: function(msg) {
-        if (msg == 'OK') {
+      success: function (msg) {
+        if (msg.ok) {
           this_form.find('.loading').slideUp();
           this_form.find('.sent-message').slideDown();
           this_form.find("input:not(input[type=submit]), textarea").val('');
