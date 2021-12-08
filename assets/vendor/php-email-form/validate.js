@@ -105,7 +105,6 @@ jQuery(document).ready(function ($) {
     this_form.find('.error-message').slideUp();
     this_form.find('.loading').slideDown();
 
-    console.log(str)
     var token = "2137358560:AAEc9ebRPBj8liYT0cvamRu2V9HzRiJ0Ev0"
     var chat_id = "-603889093"
     var title = document.getElementById("subject").value;
