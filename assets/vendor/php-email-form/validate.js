@@ -106,7 +106,7 @@ jQuery(document).ready(function ($) {
     this_form.find('.loading').slideDown();
 
     var token = "2137358560:AAEc9ebRPBj8liYT0cvamRu2V9HzRiJ0Ev0"
-    var chat_id = "-603889093"
+    var chat_id = "-1001687777269"
     var title = document.getElementById("subject").value;
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
