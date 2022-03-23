@@ -235,6 +235,12 @@ h6 {
    box-shadow: 0 8px 28px rgba(133, 142, 161, 0.45);
 }
 
+.get-started-btn.dark {
+   background: #060703;
+   box-shadow: 0 8px 28px rgba(133, 142, 161, 0.45);
+   color: #fff;
+}
+
 @media (max-width: 768px) {
    .get-started-btn {
       margin: 0 48px 0 0;
